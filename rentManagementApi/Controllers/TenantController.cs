@@ -36,6 +36,8 @@ namespace rentManagementApi.Controllers
         //     var result = _rentManagementSystem.AddATenant(tenantId, firstName, lastName, address, postalCode, city, idProof, deposit, isAssigned);
         //     return result;
         // }
+
+        //add a tenant
         public Tenant AddTenant(Tenant tenantToCreate){
             _rentManagementSystem.AddTenant(tenantToCreate);
             return tenantToCreate;

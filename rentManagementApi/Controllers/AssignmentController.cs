@@ -23,7 +23,7 @@ namespace rentManagementApi.Controllers
             //constructor........
         }
         
-        //return all tenants
+        //get all assignments
         [HttpGet]
         
         public List<Assignment> GetAssignments(){
@@ -32,7 +32,7 @@ namespace rentManagementApi.Controllers
         }
 
         [HttpPost]
-
+        //Assign a unit to the tenant
         public Assignment Assign(long tenantId, int unitNum){      
             var result = _rentManagementSystem.CreateAssignment(tenantId, unitNum);
             return result;
@@ -40,7 +40,7 @@ namespace rentManagementApi.Controllers
         }
 
         [HttpPut]
-
+        //Unassign a unit from the tenant
         public void UnAssign(long tenantId, int unitNum){
             _rentManagementSystem.Unassignment(tenantId, unitNum);
         }

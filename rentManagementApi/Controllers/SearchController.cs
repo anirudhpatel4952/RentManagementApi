@@ -22,7 +22,7 @@ namespace rentManagementApi.Controllers
             
         }
         
-        //return all tenants
+        //return a searched tenant
         [HttpGet]
         public Tenant SearchATenant(long tenantId){
             var result = _rentManagementSystem.SearchForTenants(tenantId);

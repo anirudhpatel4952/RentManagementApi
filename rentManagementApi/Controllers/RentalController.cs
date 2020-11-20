@@ -23,7 +23,7 @@ namespace rentManagementApi.Controllers
         //return all units
         [HttpGet]
         
-        public List<Rental> GetRentals(){
+        public List<Rental> GetAllUnits(){
             var result = _rentManagementSystem.PrintAllUnitsInApartn();
             return result;
         } 
